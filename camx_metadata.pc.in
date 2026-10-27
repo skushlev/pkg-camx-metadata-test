@@ -1,0 +1,11 @@
+prefix=@CMAKE_INSTALL_PREFIX@
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include/system
+
+Name: camx_metadata
+Description: Android camera metadata library
+Version: @PROJECT_VERSION@
+Libs: -L${libdir} -lcamx_metadata
+Libs.private:
+Cflags: -I${includedir}
