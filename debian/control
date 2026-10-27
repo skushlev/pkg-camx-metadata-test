@@ -1,23 +1,37 @@
-Source: template
-Section: libs
-Maintainer: Maintainers.pkg-template <Maintainers.pkg-template@qualcomm.com>
-Uploaders:
- FirstName LastName <user@oss.qualcomm.com>,
-Build-Depends: debhelper-compat (= 13)
+Source: camx-metadata
+Section: contrib/libs
+Maintainer: Qualcomm Linux Team <maintainers.pkg-camx-metadata@qualcomm.com>
+Build-Depends:
+ debhelper-compat (= 13),
+Build-Depends-Arch:
+ cmake,
 Standards-Version: 4.7.4
-Homepage: https://github.com/qualcomm-linux/<upstream>
-Vcs-Browser: https://github.com/qualcomm-linux/pkg-<upstream>
-Vcs-Git: https://github.com/qualcomm-linux/pkg-<upstream>.git
+Homepage: https://github.com/qualcomm-linux/camx-metadata
+Vcs-Browser: https://github.com/skushlev/pkg-camx-metadata-test
+Vcs-Git: https://github.com/skushlev/pkg-camx-metadata-test.git
 
-Package: template1
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: Template package
- This is an example package to demonstrate the Qualcomm OSS development flow
+Package: libcamx-metadata1
+Architecture: arm64
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+Description: Camera metadata management library
+ CAMX Metadata is a C library that implements a robust metadata packet system
+ for camera applications. It provides a structured interface for handling
+ camera-related metadata in embedded systems.
+ .
+ This package contains the shared runtime library (libcamx_metadata).
 
-Package: template-dev
-Section: libdevel
-Architecture: any
-Depends: template1 (= ${binary:Version}), ${misc:Depends}
-Description: Template package dev
- This is an example package to demonstrate the Qualcomm OSS development flow
+Package: libcamx-metadata-dev
+Section: contrib/libdevel
+Architecture: arm64
+Depends:
+ libcamx-metadata1 (= ${binary:Version}),
+ ${misc:Depends},
+Description: Camera metadata management library - development files
+ CAMX Metadata is a C library that implements a robust metadata packet system
+ for camera applications. It provides a structured interface for handling
+ camera-related metadata in embedded systems.
+ .
+ This package contains the public headers, pkg-config files and development
+ symlinks needed to build software against CAMX Metadata.

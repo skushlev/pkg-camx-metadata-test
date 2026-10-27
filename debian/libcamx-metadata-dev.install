@@ -1,0 +1,5 @@
+usr/include/system/camera_metadata.h
+usr/include/system/camera_metadata_tags.h
+usr/include/system/camera_vendor_tags.h
+usr/lib/libcamx_metadata.so
+usr/lib/pkgconfig/camx_metadata.pc
