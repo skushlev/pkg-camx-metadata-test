@@ -1,5 +1,6 @@
-template-package-name (1.0.0-1) UNRELEASED; urgency=medium
+camx-metadata (0.1.0-0qcom1) resolute; urgency=medium
 
-  * Populate.
+  * Initial upload to Ubuntu
+  * Ubuntu packaging for camera metadata library
 
- -- Github Service Bot <githubservice@qti.qualcomm.com>  Tue, 07 Oct 2025 14:21:59 -0700
+ -- Qualcomm Linux Team <maintainers.pkg-camx-metadata@qualcomm.com>  Mon, 01 Jan 2024 00:00:00 +0000
